@@ -15,10 +15,10 @@ jobs:
         run: docker build -t imageku .
 
       - name: Login to GitHub Registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u Richov-y --password-stdin
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u richov-y --password-stdin
 
       - name: Tag image
-        run: docker tag imageku ghcr.io/Richov-y/imageku:latest
+        run: docker tag imageku ghcr.io/richov-y/imageku:latest
 
       - name: Push image
-        run: docker push ghcr.io/Richov-y/imageku:latest
+        run: docker push ghcr.io/richov-y/imageku:latest
